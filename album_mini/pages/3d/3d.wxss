@@ -1,0 +1,57 @@
+.panorama {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 720px;
+    height: 720px;
+    transform-style: preserve-3d;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s ease;
+}
+
+.panorama .face {
+    position: absolute;
+    left: 0;
+    width: 720rpx;
+    height: 720rpx;
+    transform-style: preserve-3d;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.panorama .face {
+    top: 0;
+}
+
+.panorama .face,.label {
+    backface-visibility: hidden;
+}
+
+.panorama .face:nth-child(1) {
+    transform: rotateX(90deg) translateZ(-360rpx);
+}
+
+.panorama .face:nth-child(2) {
+    transform: rotateX(-90deg) translateZ(-360px);
+}
+
+.panorama .face:nth-child(3) {
+    transform: rotateY(90deg) translateZ(-350px);
+}
+
+.panorama .face:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(-350px);
+}
+
+.panorama .face:nth-child(5) {
+    transform: translateZ(-350px);
+}
+
+.panorama .face:nth-child(6) {
+    transform: rotateY(180deg) translateZ(-350px);
+}

@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/album/album",
+    "pages/skin/skin",
+    "pages/app/app",
+    "pages/create/create",
+    "pages/web/web",
+    "pages/3d/3d"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#8E9FB3",
+    "selectedColor": "#27323E",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "精彩影集",
+        "iconPath": "images/tab_ico_index.png",
+        "selectedIconPath": "images/tab_ico_index_on.png"
+      },
+      {
+        "pagePath": "pages/skin/skin",
+        "text": "制作影集",
+        "iconPath": "images/tab_ico_skin.png",
+        "selectedIconPath": "images/tab_ico_skin_on.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的影集",
+        "iconPath": "images/tab_ico_user.png",
+        "selectedIconPath": "images/tab_ico_user_on.png"
+      },
+      {
+        "pagePath": "pages/app/app",
+        "text": "更多好玩",
+        "iconPath": "images/tab_ico_app.png",
+        "selectedIconPath": "images/tab_ico_app_on.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxf35d4898105701ec",
+    "wxc963793df7e80ffa",
+    "wxedec3ff2508aafa4",
+    "wxee063745dede8339",
+    "wx2c0fd16f834172da",
+    "wx18a2ac992306a5a4",
+    "wxcccf4501bf64c49b"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

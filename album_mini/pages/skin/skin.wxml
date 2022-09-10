@@ -1,0 +1,28 @@
+<view class="skin-title">{{config.appname}}</view>
+<view class="skin-tab" wx:if="{{skinCate}}">
+    <view catchtap="changecate" class="tab-item {{cid==0?'tab-active':''}}" data-cid="0">热门</view>
+    <view catchtap="changecate" class="tab-item  {{cid==item.id?'tab-active':''}}" data-cid="{{item.id}}" wx:for="{{skinCate}}" wx:key="unique">{{item.title}}</view>
+</view>
+<view class="skin-box">
+    <image catchtap="showimgbox" class="addappimg {{showimg==1?'fadeinimg':''}}" src="{{config.addapp}}" wx:if="{{config.addapp}}"></image>
+    <view catchtouchmove="touchnone" class="maskbox" wx:if="{{showimg}}">
+        <image class="maskaddimg" src="{{config.addapp1}}"></image>
+        <text class="masktxt">关于{{config.appname}}</text>
+        <image catchtap="maskclose" class="maskcolse" src="../../images/close.png"></image>
+    </view>
+
+    <view class="skinllads" wx:if="{{config.skinllads}}">
+        <ad unitId="{{config.skinllads}}"></ad>
+    </view>
+
+    <form bindsubmit="formSubmit" reportSubmit="true">
+        <view class="skin-listbox" wx:if="{{skinData}}">
+            <button bindgetuserinfo="updateUserInfo" class="skin-item-box" data-skinid="{{item.id}}" formType="submit" openType="getUserInfo" wx:if="{{cid==0||cid==item.cid}}" wx:for="{{skinData}}" wx:key="unique">
+                <image class="skin-item-box-img" src="{{config.url}}{{item.thumb}}"></image>
+                <image class="skin-item-ishot" src="../../images/newico.png" wx:if="{{item.ishot==1}}"></image>
+                <image class="skin-item-ishot" src="../../images/hotico.png" wx:if="{{item.ishot==2}}"></image>
+                <text class="skin-item-title">{{item.title}}</text>
+            </button>
+        </view>
+    </form>
+</view>

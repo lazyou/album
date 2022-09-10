@@ -1,0 +1,22 @@
+<view class="dspage">
+    <image catchtap="goback" class="backimg" src="../../../images/back.png"></image>
+    <image class="dsbg" src="../../../images/ds_bg.png"></image>
+    <image class="dshead" src="../../../images/ds_head.png"></image>
+    <image class="dstips" src="../../../images/txt_shang.png"></image>
+    <view class="monbox" wx:if="{{config}}">
+        <view class="monimgbox">
+            <image class="moimg" src="{{config.monimg}}"></image>
+        </view>
+        <view class="appname">打赏{{config.appname}}</view>
+        <view class="moneybox">
+            <view catchtap="dopay" class="mon-item" data-num="{{item}}" wx:for="{{config.fee}}" wx:key="unique">
+                <image class="mon-bg" src="../../../images/panel.png"></image>
+                <view class="mon-text">
+                    <view class="mon-text-desc">{{item}}</view>
+                    <view class="mon-text-yuan">元</view>
+                </view>
+            </view>
+        </view>
+        <view class="mon-help">{{config.paycon}}</view>
+    </view>
+</view>

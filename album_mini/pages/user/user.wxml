@@ -1,0 +1,52 @@
+<view class="index-title">{{config.appname}}</view>
+<block wx:if="{{user.avatar}}">
+    <view class="avatarbox" wx:if="{{config.touxiang}}">
+        <image class="avbox" src="../../images/vip/{{config.touxiang}}.png"></image>
+        <image class="avatar{{config.touxiang}}" src="{{user.avatar}}"></image>
+    </view>
+    <view class="nickname">{{user.nickname}}</view>
+    <view class="navbox">
+        <view catchtap="changeTab" class="tabbox {{tab==0?'active':''}}" data-tab="0">我的影集</view>
+        <view catchtap="changeTab" class="tabbox {{tab==1?'active':''}}" data-tab="1">公开影集</view>
+    </view>
+    <view class="albumlistbox">
+        <view class="lladsbox" wx:if="{{config.userllads}}">
+            <ad unitId="{{config.userllads}}"></ad>
+        </view>
+        <view class="listbox" wx:for="{{indexData}}" wx:key="index">
+            <view class="thumb">
+                <view class="toolbox">
+                    <image catchtap="delalbum" class="delalbum" data-index="{{index}}" src="../../images/delalbum.png"></image>
+                    <view catchtap="doPrivate" class="btns-al" data-index="{{index}}">{{item.private==0?'公开':'私密'}}</view>
+                    <button class="btns-share" data-index="{{index}}" openType="share">分享</button>
+                </view>
+                <image catchtap="gotoAlbum" class="imgs" data-id="{{item.id}}" mode="aspectFill" src="{{item.thumb}}"></image>
+                <image catchtap="gotoAlbum" class="playimg" data-id="{{item.id}}" src="../../images/play.png"></image>
+                <text catchtap="gotoAlbum" class="title" data-id="{{item.id}}">{{item.title}}</text>
+            </view>
+            <view class="footerbox">
+                <text catchtap="gotoAlbum" class="nicknamebox" data-id="{{item.id}}">{{item.nickname}}</text>
+                <view class="hotbox">
+                    <image class="itemimgs" src="../../images/click1.png"></image>
+                    <text class="hottxt">{{item.click}}</text>
+                </view>
+                <view class="hotbox">
+                    <image class="itemimg" src="../../images/hua.png"></image>
+                    <text class="hottxt">{{item.best}}</text>
+                </view>
+                <image catchtap="doPrivate" class="{{item.private==1?'suo':'suo1'}}" data-index="{{index}}" src="{{item.private==1?'../../images/suo.png':'../../images/suo1.png'}}"></image>
+            </view>
+        </view>
+        <view class="loadingbox" wx:if="{{loading}}">加载中 ...</view>
+        <view class="loadingbox" wx:if="{{noData}}">全部加载完成</view>
+    </view>
+</block>
+<view class="loginbox" wx:else>
+    <view class="textbox">
+  为了您体验更多的功能
+</view>
+    <view class="textbox">
+  请先进行登录喔~ 
+</view>
+    <button bindgetuserinfo="updateUserInfo" class="login" openType="getUserInfo">立即登录</button>
+</view>

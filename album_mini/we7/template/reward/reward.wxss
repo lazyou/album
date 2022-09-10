@@ -1,0 +1,122 @@
+.dspage {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.dsbg {
+    width: 100vw;
+    height: 100vh;
+}
+
+.dshead {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300rpx;
+    z-index: 2;
+}
+
+.dstips {
+    width: 100vw;
+    position: absolute;
+    top: 250rpx;
+    left: 0;
+    height: 180rpx;
+}
+
+.monbox {
+    position: absolute;
+    z-index: 5;
+    top: 170rpx;
+    left: 25rpx;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 700rpx;
+    justify-content: center;
+    align-items: center;
+}
+
+.monimgbox {
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 100%;
+    border: 10rpx solid #ad1f0c;
+}
+
+.moimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.appname {
+    color: #f1f517;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    font-size: 35rpx;
+    letter-spacing: 2rpx;
+}
+
+.moneybox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mon-item {
+    width: 350rpx;
+    height: 200rpx;
+    position: relative;
+}
+
+.mon-bg {
+    width: 300rpx;
+    height: 150rpx;
+    margin-top: 20rpx;
+    margin-left: 25rpx;
+}
+
+.mon-text {
+    position: absolute;
+    top: 20rpx;
+    left: 25rpx;
+    width: 300rpx;
+    height: 150rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mon-text-desc {
+    font-size: 80rpx;
+    color: #ad1f0c;
+    font-weight: bold;
+    margin-right: 10rpx;
+}
+
+.mon-text-yuan {
+    font-size: 30rpx;
+    color: #ad1f0c;
+    margin-top: 30rpx;
+}
+
+.mon-help {
+    font-size: 25rpx;
+    letter-spacing: 4rpx;
+    color: #ebde26;
+    margin-top: 40rpx;
+}
+
+.backimg {
+    z-index: 10;
+    position: absolute;
+    top: 60rpx;
+    left: 20rpx;
+    width: 80rpx;
+    height: 80rpx;
+}

@@ -1,0 +1,16 @@
+<view class="index-title">{{config.appname}}</view>
+<view class="applist">
+    <block wx:for="{{appList}}" wx:key="index">
+        <view class="llads" wx:if="{{config.userllads&&index%8==0}}">
+            <ad unitId="{{config.userllads}}"></ad>
+        </view>
+        <view catchtap="gotoapp" class="appbox" data-index="{{index}}">
+            <image class="appimg" src="{{item.thumb}}"></image>
+            <view class="apptext">
+                <text class="t1">{{item.title}}</text>
+                <text class="t2">{{item.text}}</text>
+            </view>
+            <view class="goto">进入</view>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,266 @@
+<block wx:if="{{skinData!='ad'}}">
+    <block wx:if="{{showphoto}}">
+        <view catchtap="gotoUser" class="savebtn">
+            <image class="sbtnimg" src="{{config.savebtn}}"></image>
+            <text class="sbtxt">保存相册</text>
+        </view>
+        <view class="huadiv" wx:if="{{isShowYe}}">
+            <image class="ye ye7" src="../../images/animate/ye.png"></image>
+            <image class="ye ye8" src="../../images/animate/ye.png"></image>
+            <image class="ye ye9" src="../../images/animate/ye.png"></image>
+            <image class="ye ye10" src="../../images/animate/ye.png"></image>
+            <image class="ye ye11" src="../../images/animate/ye.png"></image>
+        </view>
+        <view class="huadiv" wx:if="{{isShowHua}}">
+            <image class="ban1" src="../../images/animate/hua1.png"></image>
+            <image class="ban2" src="../../images/animate/hua2.png"></image>
+            <image class="ban3" src="../../images/animate/hua1.png"></image>
+            <image class="ban4" src="../../images/animate/hua1.png"></image>
+            <image class="ban5" src="../../images/animate/hua2.png"></image>
+            <image class="ban6" src="../../images/animate/hua3.png"></image>
+            <image class="ban7" src="../../images/animate/hua1.png"></image>
+            <image class="ban8" src="../../images/animate/hua1.png"></image>
+            <image class="ban9" src="../../images/animate/hua3.png"></image>
+            <image class="ban10" src="../../images/animate/hua4.png"></image>
+            <image class="ban11" src="../../images/animate/hua3.png"></image>
+        </view>
+        <view class="huadiv" wx:if="{{isShowDot}}">
+            <view class="dian dian1"></view>
+            <view class="dian dian2"></view>
+            <view class="dian dian3"></view>
+            <view class="dian dian4"></view>
+            <view class="dian dian5"></view>
+            <view class="dian dian6"></view>
+            <view class="dian dian7"></view>
+            <view class="dian dian8"></view>
+            <view class="dian dian9"></view>
+            <view class="dian dian10"></view>
+            <view class="dian dian11"></view>
+            <view class="dian dian12"></view>
+        </view>
+        <view class="hd" wx:if="{{isHD}}">
+            <image src="../../images/animate/hd.gif"></image>
+        </view>
+        <view class="huadiv" wx:if="{{isXin}}">
+            <image class="w13-xin1" src="../../images/animate/xin.png"></image>
+            <image class="w13-xin2" src="../../images/animate/xin.png"></image>
+            <image class="w13-xin3" src="../../images/animate/xin.png"></image>
+            <image class="w13-xin4" src="../../images/animate/xin.png"></image>
+            <image id="w13-pot1" src="../../images/animate/pot.png"></image>
+            <image id="w13-pot2" src="../../images/animate/pot.png"></image>
+            <image id="w13-pot3" src="../../images/animate/pot.png"></image>
+        </view>
+        <block wx:if="{{isYun}}">
+            <view class="yundiv absolute">
+                <image class="yun1 bg_img3 absolute" src="../../images/animate/yun.png"></image>
+                <image class="yun2 bg_img3 absolute" src="../../images/animate/yun.png"></image>
+                <image class="yun3 bg_img3 absolute" src="../../images/animate/yun.png"></image>
+            </view>
+            <view class="yundiv yundiv1 absolute">
+                <image class="yun1 bg_img3 absolute" src="../../images/animate/yun.png"></image>
+                <image class="yun2 bg_img3 absolute" src="../../images/animate/yun.png"></image>
+                <image class="yun3 bg_img3 absolute" src="../../images/animate/yun.png"></image>
+            </view>
+        </block>
+        <view class="huadiv" wx:if="{{isXue}}">
+            <image class="xuehua1" id="xuehua1" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua2" id="xuehua2" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua3" id="xuehua3" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua4" id="xuehua4" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua5" id="xuehua5" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua6" id="xuehua6" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua7" id="xuehua7" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua8" id="xuehua8" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua9" id="xuehua9" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua10" id="xuehua10" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua11" id="xuehua11" src="../../images/animate/xuehua.png"></image>
+            <image class="xuehua12" id="xuehua12" src="../../images/animate/xuehua.png"></image>
+        </view>
+        <view class="huadiv" wx:if="{{isFy}}">
+            <view class="fy1 fye7">
+                <image src="../../images/animate/h1.png"></image>
+            </view>
+            <view class="fy2 fye8">
+                <image src="../../images/animate/h2.png"></image>
+            </view>
+            <view class="fy3 fye9">
+                <image src="../../images/animate/h3.png"></image>
+            </view>
+            <view class="fy1 fye10">
+                <image src="../../images/animate/h1.png"></image>
+            </view>
+            <view class="fy2 fye11">
+                <image src="../../images/animate/h2.png"></image>
+            </view>
+        </view>
+        <view wx:if="{{isCq}}">
+            <image class="absolute flag" src="../../images/animate/caiqi.png"></image>
+            <image class="absolute flag1" src="../../images/animate/caiqi.png"></image>
+        </view>
+        <view class="hd" wx:if="{{isQT}}">
+            <image src="../../images/animate/qt.gif"></image>
+        </view>
+        <view class="hd" wx:if="{{isHH}}">
+            <image src="../../images/animate/huanghua.gif"></image>
+        </view>
+        <view wx:if="{{isPGY}}">
+            <view class="wd1 dian1p absolute">
+                <image src="../../images/animate/p1.png"></image>
+            </view>
+            <view class="wd1 dian2p absolute">
+                <image src="../../images/animate/p1.png"></image>
+            </view>
+            <view class="wd2 dian4p absolute">
+                <image src="../../images/animate/p2.png"></image>
+            </view>
+            <view class="wd3 dian5p absolute">
+                <image src="../../images/animate/p4.png"></image>
+            </view>
+            <view class="wd3 dian8p absolute">
+                <image src="../../images/animate/p4.png"></image>
+            </view>
+            <view class="wd4 dian7p absolute">
+                <image src="../../images/animate/p5.png"></image>
+            </view>
+            <view class="wd4 dian6p absolute">
+                <image src="../../images/animate/p5.png"></image>
+            </view>
+        </view>
+        <view class="frame" touchmove="touchmove" wx:if="{{skinData.frameimg}}">
+            <image class="frameImage" src="{{skinData.frameimg}}"></image>
+        </view>
+        <view class="fixtext" wx:if="{{text&&config.zimu==2}}">{{text}}</view>
+        <image catchtap="backhome" class="backimg" src="../../images/back.png"></image>
+        <image class="bgimg" src="{{skinData.bgimg}}" style="width:{{winW}}rpx;height:{{winH}}rpx" wx:if="{{albumData}}"></image>
+        <image catchtap="playstate" class="music {{music?'musicPlay':''}}" src="../../images/music.png"></image>
+        <view class="templateAnimate" style="top: {{imgT}}rpx; left: {{imgML}}rpx; width: {{imgW}}rpx; height:{{imgH}}rpx;" wx:if="{{albumData}}">
+            <view style="width: {{imgW}}rpx; height:{{imgH}}rpx;-webkit-animation: {{currentAnimation}} 9s linear infinite;">
+                <image lazyLoad bindload="loadImg" mode="widthFix" src="{{img}}" style="border: 10rpx solid #fff; box-shadow: 0 0 10rpx 5rpx #eee; box-sizing: border-box; width: {{imgW}}rpx;height:{{imgH}}rpx" wx:if="{{img}}">
+                    <text class="txtbox-top" wx:if="{{text&&config.zimu==1}}">{{text}}</text>
+                    <text class="txtbox" wx:if="{{text&&config.zimu==0}}">{{text}}</text>
+                </image>
+            </view>
+        </view>
+        <view class="toolbox">
+            <button catchtap="showmob" class="tool-item-box" wx:if="{{!his}}">
+                <image class="toolimg" src="../../images/skin.png"></image>
+                <text class="tooltxt">换模板</text>
+            </button>
+            <button catchtap="showmu" class="tool-item-box" wx:if="{{!his}}">
+                <image class="toolimg" src="../../images/mulist.png"></image>
+                <text class="tooltxt">换音乐</text>
+            </button>
+            <button catchtap="showAddpic" class="{{his?'tool-item-box-his':'tool-item-box'}}">
+                <image class="toolimg" src="../../images/pics.png"></image>
+                <text class="tooltxt">照片文字</text>
+            </button>
+            <button class="{{his?'tool-item-box-his':'tool-item-box'}}" data-edit="1" openType="share">
+                <image class="toolimg" src="../../images/pyico.png"></image>
+                <text class="tooltxt">好友编辑</text>
+            </button>
+            <button class="tool-item-sharebox" data-edit="0" openType="share">
+                <image class="tool-share-img" src="../../images/fxqy.png"></image>
+            </button>
+        </view>
+    </block>
+</block>
+<view class="moblist-box" wx:if="{{showmob&&mobData}}">
+    <view class="mob-title">影集模板</view>
+    <image catchtap="closeMob" class="mob-back" src="../../images/mob-back.png"></image>
+    <view class="mob-tab">
+        <view catchtap="changecate" class="tab-item {{cid==0?'tab-active':''}}" data-cid="0">热门</view>
+        <view catchtap="changecate" class="tab-item  {{cid==item.id?'tab-active':''}}" data-cid="{{item.id}}" wx:for="{{mobCate}}" wx:key="unique">{{item.title}}</view>
+    </view>
+    <view class="skin-box">
+        <view class="skin-listbox" wx:if="{{mobData}}">
+            <view catchtap="chooseThis" class="skin-item-box" data-skinid="{{item.id}}" wx:if="{{cid==0||cid==item.cid}}" wx:for="{{mobData}}" wx:key="unique">
+                <image class="skin-item-box-img" src="{{item.thumb}}"></image>
+                <image class="skin-item-ishot" src="../../images/newico.png" wx:if="{{item.ishot==1}}"></image>
+                <image class="skin-item-ishot" src="../../images/hotico.png" wx:if="{{item.ishot==2}}"></image>
+                <view class="maskcooed" wx:if="{{item.id==albumData.skin}}">已选</view>
+                <text class="skin-item-title">{{item.title}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="moblist-box" wx:if="{{mushow}}">
+    <view class="mob-title">选择音乐</view>
+    <image catchtap="closeMu" class="mob-back" src="../../images/mob-back.png"></image>
+    <view class="mu-list">
+        <view class="mu-item" wx:for="{{mulist}}" wx:key="unique">
+            <view catchtap="playMusic" class="mu-left" data-music="{{item.music}}">
+                <image class="mu-play" src="../../images/mu_stop.png" wx:if="{{selemusic==item.music}}"></image>
+                <image class="mu-play" src="../../images/mu_play.png" wx:else></image>
+                <text class="mu-name {{selemusic==item.music?'mu-active':''}}">{{item.title}}</text>
+            </view>
+            <view catchtap="seMusic" class="mu-btn" data-music="{{item.music}}" wx:if="{{selemusic==item.music}}">确定</view>
+        </view>
+    </view>
+</view>
+<view class="moblist-box" wx:if="{{picshow}}">
+    <view class="mob-title">照片文字</view>
+    <image catchtap="closepics" class="mob-back" src="../../images/mob-back.png"></image>
+    <view class="photo-edit-box">
+        <view class="photo-title-box">
+            <text class="photo-title-desc">相册标题</text>
+            <input bindblur="blurIput" bindfocus="focusTitle" bindinput="writeTitle" class="photo-title-input" maxlength="40" value="{{inputTitle}}"></input>
+        </view>
+        <view class="photo-title-len" wx:if="{{titlehide}}">
+            <text class="photo-this-font">{{lens}}</text>/40
+</view>
+        <view class="photo-title-edit">照片编辑</view>
+        <view class="pic-list-box" wx:for="{{albumData.imgdata}}" wx:key="unique">
+            <view class="pic-list-left">
+                <image class="pic-list-img" src="{{item}}"></image>
+                <view class="pis-mask">
+                    <image catchtap="down" class="pics-down" data-i="{{index}}" src="../../images/down.png" wx:if="{{index+1!=albumData.imgdata.length}}"></image>
+                    <image catchtap="up" class="pics-up" data-i="{{index}}" src="../../images/up.png" style="{{index+1==albumData.imgdata.length?'margin-left:220rpx;':''}}" wx:if="{{index!=0}}"></image>
+                </view>
+            </view>
+            <view class="pic-list-right">
+                <textarea bindblur="blurtxt" bindinput="writetxt" class="pic-txt-edit" data-ti="{{index}}" maxlength="30" placeholder="点击这里给图片添加文字" value="{{albumData.txtdata[index]}}"></textarea>
+                <view class="pic-txt-bottom">
+                    <image catchtap="deletePic" class="pic-txt-del" data-i="{{index}}" src="../../images/del.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <cover-view catchtap="addpics" class="addpic-btn">+  添加照片</cover-view>
+</view>
+<block wx:if="{{showphoto&&skinData=='ad'}}">
+    <view catchtap="gotoUser" class="savebtn">
+        <image class="sbtnimg" src="{{config.savebtn}}"></image>
+        <text class="sbtxt">保存相册</text>
+    </view>
+    <image catchtap="backhome" class="backimg" src="../../images/back.png"></image>
+    <view class="ad-container" style="background:#000">
+        <view class="pic-review">
+            <view style="width:100vw;height:100vh;display: flex;align-items: center;justify-content: center;">
+                <image mode="aspectFill" src="{{img}}" style="height:100%;width:100%;position:absolute;top:0;left:0;filter: blur(60rpx);animation: fadeinAndout 5s linear infinite;"></image>
+                <image class="image phad-{{currentAnimation}}" mode="widthFix" src="{{img}}" style="width:100%;"></image>
+            </view>
+            <view class="showwords">{{text?text:''}}</view>
+        </view>
+    </view>
+    <view class="toolbox">
+        <button catchtap="showmob" class="tool-item-box" wx:if="{{!his}}">
+            <image class="toolimg" src="../../images/skin.png"></image>
+            <text class="tooltxt">换模板</text>
+        </button>
+        <button catchtap="showmu" class="tool-item-box" wx:if="{{!his}}">
+            <image class="toolimg" src="../../images/mulist.png"></image>
+            <text class="tooltxt">换音乐</text>
+        </button>
+        <button catchtap="showAddpic" class="{{his?'tool-item-box-his':'tool-item-box'}}">
+            <image class="toolimg" src="../../images/pics.png"></image>
+            <text class="tooltxt">照片文字</text>
+        </button>
+        <button class="{{his?'tool-item-box-his':'tool-item-box'}}" data-edit="1" openType="share">
+            <image class="toolimg" src="../../images/pyico.png"></image>
+            <text class="tooltxt">好友编辑</text>
+        </button>
+        <button class="tool-item-sharebox" data-edit="0" openType="share">
+            <image class="tool-share-img" src="../../images/fxqy.png"></image>
+        </button>
+    </view>
+</block>

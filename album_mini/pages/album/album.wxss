@@ -1,0 +1,436 @@
+@import "../../baseWxss/0.wxss";
+@import "../../baseWxss/1.wxss";
+
+page {
+}
+
+.fixico {
+    position: absolute;
+    right: 30rpx;
+    top: 130rpx;
+    width: 255rpx;
+    height: 64rpx;
+    z-index: 999;
+}
+
+.bgimg {
+    width: 100vw;
+    height: 100vh;
+}
+
+.txtbox {
+    position: absolute;
+    bottom: 6%;
+    left: 3%;
+    color: #f5f5f5;
+    text-shadow: white 0px 0px 10rpx,white 0px 0px 20rpx,rgb(0,128,0) 0px 0px 30rpx,rgb(0,128,0) 0px 0px 40rpx,rgb(0,128,0) 0px 0px 70rpx,rgb(0,128,0) 0px 0px 80rpx,rgb(0,128,0) 0px 0px 100rpx;
+    font-size: 35rpx;
+    z-index: 2;
+}
+
+.txtbox-top {
+    position: absolute;
+    top: 6%;
+    left: 3%;
+    color: #f5f5f5;
+    text-shadow: white 0px 0px 10rpx,white 0px 0px 20rpx,rgb(0,128,0) 0px 0px 30rpx,rgb(0,128,0) 0px 0px 40rpx,rgb(0,128,0) 0px 0px 70rpx,rgb(0,128,0) 0px 0px 80rpx,rgb(0,128,0) 0px 0px 100rpx;
+    font-size: 35rpx;
+    z-index: 2;
+}
+
+.frame {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 102;
+}
+
+.frameImage {
+    position: absolute;
+    left: 0rpx;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kfbtn {
+    position: fixed;
+    top: 350rpx;
+    right: 30rpx;
+    z-index: 105;
+}
+
+.kfimg {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.templateAnimate {
+    position: absolute;
+    z-index: 101;
+}
+
+.photoAnimate {
+    position: absolute;
+}
+
+.backimg {
+    position: fixed;
+    top: 60rpx;
+    left: 20rpx;
+    width: 80rpx;
+    height: 80rpx;
+    z-index: 108;
+}
+
+.backimg image {
+    width: 100%;
+    height: 100%;
+}
+
+.photoAnimate>image {
+    position: absolute;
+    display: block;
+}
+
+.music {
+    position: fixed;
+    top: 210rpx;
+    right: 20rpx;
+    width: 70rpx;
+    height: 70rpx;
+    z-index: 106;
+}
+
+@-webkit-keyframes musicPlay {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes musicPlay {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.musicPlay {
+    animation: musicPlay 1.2s linear infinite;
+}
+
+.toolbox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 140rpx;
+    z-index: 200;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.tool-item-box {
+    width: 140rpx;
+    height: 140rpx;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.6);
+    margin-left: 10rpx;
+    border-top-right-radius: 20rpx;
+    border-top-left-radius: 20rpx;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltxt {
+    font-size: 25rpx;
+    color: #fff;
+    letter-spacing: 2rpx;
+}
+
+.toolimg {
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: 5rpx;
+}
+
+.tool-item-sharebox {
+    border-top-right-radius: 20rpx;
+    border-top-left-radius: 20rpx;
+    width: 160rpx;
+    height: 140rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-share-img {
+    width: 100rpx;
+    height: 100rpx;
+    animation: dong infinite 1.2s linear;
+}
+
+@-webkit-keyframes dong {
+    from {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes dong {
+    from {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(0.9);
+    }
+}
+
+.editbtn {
+    position: absolute;
+    bottom: 260rpx;
+    left: 200rpx;
+    z-index: 1005;
+    width: 330rpx;
+    height: 100rpx;
+    -webkit-animation: mymove 4s infinite;
+    overflow: hidden;
+}
+
+.editbtnfoot {
+    position: absolute;
+    bottom: 50rpx;
+    left: 200rpx;
+    z-index: 1005;
+    width: 330rpx;
+    height: 100rpx;
+    -webkit-animation: mymove 4s infinite;
+    overflow: hidden;
+}
+
+.edimg {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes mymove {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+}
+
+@-webkit-keyframes mymove {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+}
+
+.sharepy {
+    z-index: 9999;
+    position: absolute;
+    top: 550rpx;
+    right: 20rpx;
+    width: 120rpx;
+    height: 120rpx;
+    -webkit-animation: mymove 4s infinite;
+}
+
+.homebtn {
+    z-index: 9999;
+    position: absolute;
+    top: 550rpx;
+    left: 20rpx;
+    width: 120rpx;
+    height: 120rpx;
+    -webkit-animation: mymove 4s infinite;
+}
+
+.homebtn image {
+    width: 100%;
+    height: 100%;
+}
+
+.jubaobtn {
+    z-index: 1005;
+    position: absolute;
+    top: 760rpx;
+    left: 20rpx;
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.flowersbtn {
+    z-index: 1005;
+    position: absolute;
+    bottom: 480rpx;
+    right: 20rpx;
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.adbox-btn {
+    z-index: 1005;
+    position: absolute;
+    top: 850rpx;
+    right: 20rpx;
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.index-ads {
+    width: 100%;
+    height: 255rpx;
+    z-index: 9999;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 750rpx;
+    overflow: hidden;
+}
+
+.songhua {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 150px;
+    width: 150rpx;
+    height: 460rpx;
+    -webkit-animation: songhua 2s linear both;
+    z-index: 10000;
+}
+
+@-webkit-keyframes songhua {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0rpx,0rpx);
+        -webkit-animation-timing-function: ease-out;
+    }
+
+    20% {
+        opacity: 1;
+        -webkit-transform: translate(0px,50rpx);
+    }
+
+    40% {
+        opacity: 1;
+        -webkit-transform: translate(0px,100rpx) rotate(0deg);
+        -webkit-animation-timing-function: linear;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(220rpx,250rpx) scale(0.3) rotate(10deg);
+    }
+}
+
+.pf1 {
+    position: absolute;
+    left: 20rpx;
+    bottom: 480rpx;
+    width: 100rpx;
+    height: 100rpx;
+    z-index: 9999;
+}
+
+.pf2 {
+    position: absolute;
+    left: 20rpx;
+    top: 350rpx;
+    width: 100rpx;
+    height: 100rpx;
+    z-index: 9999;
+}
+
+.fixtext {
+    position: fixed;
+    top: 200rpx;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    color: #fffc61;
+    text-shadow: 0 0 10rpx #000;
+    font-size: 40rpx;
+    font-weight: bold;
+    z-index: 104;
+    letter-spacing: 5rpx;
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+
+.ad-ani {
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+.monbtn {
+    position: fixed;
+    bottom: 380rpx;
+    right: 20rpx;
+    width: 120rpx;
+    height: 120rpx;
+    z-index: 1005;
+}

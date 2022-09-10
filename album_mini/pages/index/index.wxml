@@ -1,0 +1,56 @@
+<block wx:if="{{config}}">
+    <view class="index-title">{{config.appname}}</view>
+    <view class="index-tab">
+        <view catchtap="changeTab" class="tab-item {{ishot==1?'tab-active':''}}" data-ishot="1">精彩影集</view>
+        <view catchtap="changeTab" class="tab-item {{ishot==0?'tab-active':''}}" data-ishot="0">最新影集</view>
+    </view>
+
+    <swiper wx:if="{{hd}}" autoplay="{{autoplay}}" bindchange="bindchange" circular="true" class="swiperbox" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}" nextMargin="40rpx" previousMargin="40rpx" wx:if="{{ishot==1&&hd}}">
+        <swiper-item catchtap="gotoApp" wx:for="{{hd}}" wx:key="unique">
+            <image class="slide-image" height="150" mode="aspectFill" src="{{item.thumb}}" width="355"></image>
+        </swiper-item>
+    </swiper>
+
+    <form bindsubmit="formSubmit" class="index-box" reportSubmit="true">
+        <block wx:for="{{indexData}}" wx:key="index">
+            <view class="list-box">
+                <button catchtap="gotoAlbum" class="list-img" data-id="{{item.id}}" formType="submit">
+                    <text class="title" wx:if="{{item.title}}">{{item.title}}</text>
+                    <image class="list-imgs" mode="aspectFill" src="{{item.thumb}}"></image>
+                    <image class="play" src="../../images/play.png"></image>
+                    <view class="toolbox">
+                        <view class="tool-item">
+                            <image class="index-click" src="../../images/index_click.png"></image>
+                            <text class="index-txt">{{formatNumber.toTenthousandFix1(item.click)}} 次播放</text>
+                        </view>
+                        <view class="tool-item" wx:if="{{item.best!=0}}">
+                            <image class="index-click" src="../../images/index_hua.png"></image>
+                            <text class="index-txt">{{item.best}}</text>
+                        </view>
+                    </view>
+                </button>
+                <view class="list-box-item">
+                    <view class="list-box-left">
+                        <image class="list-box-avatar" src="{{item.avatar}}"></image>
+                        <text class="list-nickname">{{item.nickname}}</text>
+                    </view>
+                    <button class="list-box-share" data-index="{{index}}" openType="share">
+                        <image class="list-box-shareimg" src="../../images/icon_weixin.png"></image>
+                        <text class="list-box-sharetile">分享</text>
+                        <view class="dot"></view>
+                    </button>
+                </view>
+            </view>
+
+            <view class="lladsbox" wx:if="{{config.llads&&index%8==0}}">
+                <ad unitId="{{config.llads}}"></ad>
+            </view>
+
+        </block>
+        <view class="loadingbox" wx:if="{{loading}}">加载中 ...</view>
+        <view class="loadingbox" wx:if="{{noData}}">全部加载完成</view>
+    </form>
+
+     <image catchtap="gotoJump" class="piaofuad" src="{{inad.thumb}}" wx:if="{{inad}}"></image>
+</block>
+<wxs module="formatNumber" src="../../we7/formatNumber.wxs" />
